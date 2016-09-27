@@ -15,7 +15,7 @@ var app = angular
      .state('home.new', {
        url: 'new',
        templateUrl: 'home/new.html',
-       controller: 'ProvidersController as ctrl'
+       controller: 'NewProviderController as ctrl'
      })
     .state('home.providers', {
        url: 'providers',
