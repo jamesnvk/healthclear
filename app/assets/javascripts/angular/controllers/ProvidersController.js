@@ -1,12 +1,8 @@
-app.controller('ProvidersController', function(){
+app.controller('ProvidersController', function(ProviderService, $location, $state){
 
   var ctrl = this;
-  ctrl.providers = [
-    {
-      name: 'Advanced Medical Imaging'
-    },
-    {
-      name: 'Sports Medicine Institute of NJ'
-    }
-  ]
+    ProviderService.getProviders()
+    .then(function(response) {
+      ctrl.providers = response.data;
+    });
 });
