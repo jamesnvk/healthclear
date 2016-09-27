@@ -3,4 +3,4 @@ app.factory('Provider', function ($resource) {
     update: {method: 'PUT'}
   });
   return Provider;
-};
+});
