@@ -5,4 +5,7 @@ app.service('ProviderService', function($http){
   this.createProvider = function(data){
     return $http.post('http://localhost:3000/api/v1/providers', data)
   }
+  this.getProvider = function(id) {
+    return $http.get('http://localhost:3000/api/v1/providers/' + id)
+  }
 })
