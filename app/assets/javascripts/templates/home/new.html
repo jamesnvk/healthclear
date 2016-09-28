@@ -2,9 +2,8 @@
 <form ng-submit="ctrl.addProvider()">
   <div class="form-group">
     <label for="Provider">Provider</label>
-    <input type="text" class="form-control" id="provider" placeholder="Enter Provider">
+    <input type="text" ng-model="ctrl.provider.name" class="form-control" id="provider" placeholder="Enter Provider">
 
- 
   </div>
     <button type="submit" class="btn btn-default">Submit</button>
 </form>
