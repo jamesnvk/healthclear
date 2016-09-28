@@ -8,7 +8,7 @@ app.controller('HomeController', function(ProviderService, $location){
 
   this.search = function(){
     ProviderService.getProviders().success(function(data){
-      ctrl.items = data
+      ctrl.providers = data
     })
   }
 
