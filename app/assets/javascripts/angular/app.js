@@ -25,7 +25,7 @@ var app = angular
      .state('home.provider', {
        url: 'provider/:id',
        templateUrl: 'home/show.html',
-       controller: 'ProvidersController as ctrl'
+       controller: 'ShowProviderController as ctrl'
      })
 
   $urlRouterProvider.otherwise('/');
