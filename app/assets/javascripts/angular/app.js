@@ -1,5 +1,5 @@
 var app = angular
-  .module('app', ['ui.router', 'ngResource', 'templates'])
+  .module('app', ['ui.router', 'ngResource', 'templates', 'Devise'])
   .config(function ($stateProvider, $urlRouterProvider){
    $stateProvider
      .state('home', {
@@ -21,6 +21,11 @@ var app = angular
        url: 'provider/:id',
        templateUrl: 'home/show.html',
        controller: 'ShowProviderController as ctrl'
+     })
+     .state('home.login', {
+      url: 'login',
+      templateUrl: 'home/login.html',
+      controller: 'AuthController as ctrl'
      })
 
   $urlRouterProvider.otherwise('/');
