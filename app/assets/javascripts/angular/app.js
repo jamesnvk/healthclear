@@ -22,11 +22,17 @@ var app = angular
        templateUrl: 'home/show.html',
        controller: 'ShowProviderController as ctrl'
      })
-     .state('home.login', {
+      .state('home.register', {
+      url: 'register',
+      templateUrl: 'home/register.html',
+      controller: 'AuthController as ctrl'
+     })
+      .state('home.login', {
       url: 'login',
       templateUrl: 'home/login.html',
       controller: 'AuthController as ctrl'
      })
+
 
   $urlRouterProvider.otherwise('/');
 }); 

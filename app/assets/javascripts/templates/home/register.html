@@ -1,32 +1,41 @@
 <style>.login-form-1{max-width:300px;border-radius:5px;display:inline-block}.main-login-form{position:relative}.login-form-1 .form-control{border:0;box-shadow:0 0 0;border-radius:0;background:0 0;color:#555;padding:7px 0;font-weight:700;height:auto}.login-form-1 .form-control::-webkit-input-placeholder{color:#999}.login-form-1 .form-control:-moz-placeholder,.login-form-1 .form-control:-ms-input-placeholder,.login-form-1 .form-control::-moz-placeholder{color:#999}.login-form-1 .form-group{margin-bottom:0;border-bottom:2px solid #efefef;padding-right:20px;position:relative}.login-form-1 .form-group:last-child{border-bottom:0}.login-group{background:#fff;color:#999;border-radius:8px;padding:10px 20px}.login-group-checkbox{padding:5px 0}.login-form-1 .login-button{position:absolute;right:-25px;top:50%;background:#fff;color:#999;padding:11px 0;width:50px;height:50px;margin-top:-25px;border:5px solid #efefef;border-radius:50%;transition:all ease-in-out .5s}.login-form-1 .login-button:hover{color:#555;transform:rotate(450deg)}.login-form-1 .login-button.clicked{color:#555}.login-form-1 .login-button.clicked:hover{transform:none}.login-form-1 .login-button.clicked.success{color:#2ecc71}.login-form-1 .login-button.clicked.error{color:#e74c3c}.etc-login-form{color:#919191;padding:10px 20px}.etc-login-form p{margin-bottom:5px}</style>
 
-
+<!-- REGISTRATION FORM -->
 <div class="text-center" style="padding:50px 0">
-  <h3>Login</h3>
+  <h3>Register</h3>
   <!-- Main Form -->
   <div class="login-form-1">
-    <form id="login-form" class="text-left">
+    <form id="register-form" class="text-left">
       <div class="login-form-main-message"></div>
       <div class="main-login-form">
         <div class="login-group">
           <div class="form-group">
-            <label for="lg_username" class="sr-only">Username</label>
-            <input type="text" class="form-control" id="lg_username" name="lg_username" placeholder="username">
+            <label for="reg_username" class="sr-only">Email address</label>
+            <input type="text" class="form-control" id="reg_username" name="reg_username" placeholder="username">
           </div>
           <div class="form-group">
-            <label for="lg_password" class="sr-only">Password</label>
-            <input type="password" class="form-control" id="lg_password" name="lg_password" placeholder="password">
+            <label for="reg_password" class="sr-only">Password</label>
+            <input type="password" class="form-control" id="reg_password" name="reg_password" placeholder="password">
           </div>
+          <div class="form-group">
+            <label for="reg_password_confirm" class="sr-only">Password Confirm</label>
+            <input type="password" class="form-control" id="reg_password_confirm" name="reg_password_confirm" placeholder="confirm password">
+          </div>
+          
+          <div class="form-group">
+            <label for="reg_email" class="sr-only">Email</label>
+            <input type="text" class="form-control" id="reg_email" name="reg_email" placeholder="email">
+          </div>
+          
           <div class="form-group login-group-checkbox">
-            <input type="checkbox" id="lg_remember" name="lg_remember">
-            <label for="lg_remember">remember</label>
+            <input type="checkbox" class="" id="reg_agree" name="reg_agree">
+            <label for="reg_agree">i agree with <a href="#">terms</a></label>
           </div>
         </div>
         <button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
       </div>
       <div class="etc-login-form">
-        <p>forgot your password? <a href="#">click here</a></p>
-        <p>new user? <a href="#">create new account</a></p>
+        <p>already have an account? <a href="#">login here</a></p>
       </div>
     </form>
   </div>
