@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'angular-rails-templates'
 gem 'responders'
 gem 'bower-rails'
+gem 'devise'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
