@@ -9,9 +9,9 @@ class ApplicationController < ActionController::Base
   def index
   end
   
-  private
-  def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_up) << :username
+private
+ def configure_permitted_parameters
+    added_attrs = [:username, :email, :password, :password_confirmation, :remember_me]
+    devise_parameter_sanitizer.permit :sign_up, keys: added_attrs
   end
 end
-
