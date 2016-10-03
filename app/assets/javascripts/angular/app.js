@@ -27,9 +27,12 @@ var app = angular
       templateUrl: 'home/login.html',
       controller: 'AuthController as ctrl'
      })
-      .state('provider', {
-       url: 'provider/:id',
-       templateUrl: 'home/show.html',
+      .state('home.provider', {
+       views: { 
+        "more": {
+          templateUrl: 'home/show.html'
+          }
+        },
        controller: 'ShowProviderController as ctrl'
      })
 
