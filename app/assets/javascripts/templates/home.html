@@ -20,11 +20,11 @@
     </div>
   </div>
 
-  <div class="container" ng-repeat="i in ctrl.providers | searchFor:queryTerm">
+  <div class="container" ng-repeat="provider in ctrl.providers | searchFor:queryTerm">
     <div class="bs-calltoaction bs-calltoaction-info">
       <div class="row">
         <div class="col-md-9 cta-contents">
-          <h1 class="cta-title">{{ i.name }}</h1>
+          <h1 class="cta-title">{{ provider.name }}</h1>
             <div class="cta-desc">
               <p>Average Prices</p>
               <p>Location</p>
@@ -32,7 +32,7 @@
             </div>
           </div>
         <div class="col-md-3 cta-button">
-          <a href="#" class="btn btn-lg btn-block btn-info">More</a>
+          <a ui-sref="provider({id: provider.id})" class="btn btn-lg btn-block btn-info">More</a>
         </div>
       </div>
     </div>

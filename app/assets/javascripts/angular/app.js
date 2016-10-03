@@ -17,11 +17,6 @@ var app = angular
        templateUrl: 'home/new.html',
        controller: 'NewProviderController as ctrl'
      })
-     .state('home.provider', {
-       url: 'provider/:id',
-       templateUrl: 'home/show.html',
-       controller: 'ShowProviderController as ctrl'
-     })
       .state('home.register', {
       url: 'register',
       templateUrl: 'home/register.html',
@@ -31,6 +26,11 @@ var app = angular
       url: 'login',
       templateUrl: 'home/login.html',
       controller: 'AuthController as ctrl'
+     })
+      .state('provider', {
+       url: 'provider/:id',
+       templateUrl: 'home/show.html',
+       controller: 'ShowProviderController as ctrl'
      })
 
 
