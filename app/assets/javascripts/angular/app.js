@@ -35,6 +35,7 @@ var app = angular
         },
        controller: 'ShowProviderController as ctrl'
      })
+      
 
 
   $urlRouterProvider.otherwise('/');

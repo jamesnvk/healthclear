@@ -37,7 +37,7 @@ module Api
       private
       
       def provider_params 
-        params.require(:provider).permit(:name, :price) 
+        params.require(:provider).permit(:name, :price, :location) 
       end 
       
     end 
