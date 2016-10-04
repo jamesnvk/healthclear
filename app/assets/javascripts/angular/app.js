@@ -1,5 +1,5 @@
 var app = angular
-  .module('app', ['ui.router', 'ngResource', 'templates', 'Devise'])
+  .module('app', ['ui.router', 'ngResource', 'templates', 'Devise', 'xeditable'])
   .config(function ($stateProvider, $urlRouterProvider){
    $stateProvider
      .state('home', {
@@ -40,3 +40,7 @@ var app = angular
 
   $urlRouterProvider.otherwise('/');
 }); 
+
+app.run(function(editableOptions) {
+  editableOptions.theme = 'bs3';
+});  
