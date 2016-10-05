@@ -8,4 +8,7 @@ app.service('ProviderService', function($http){
   this.getProvider = function(id) {
     return $http.get('http://localhost:3000/api/v1/providers/' + id)
   }
+  this.updateProvider = function(id){
+
+  }
 })

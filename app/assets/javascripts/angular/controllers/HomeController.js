@@ -13,18 +13,17 @@ app.controller('HomeController', function(ProviderService, $location, $http){
   }
 
   this.editProvider = function(id){
+    //find specific provider id to edit
     var lookup = {}
       for (var i = 0, len = this.providers.length; i < len; i++) {
         lookup[this.providers[i].id] = this.providers[i];
       } 
-      debugger
-    //   return lookup[id]
-    // var data = {location: this.provider.location}
+    var provider = lookup[id]
+    var data = {location: provider.location}
+    
+    return $http.patch('http://localhost:3000/api/v1/providers/' + provider.id, data).error(function(err) {
+       console.log("There was an error")
+       })
 
-    // //ProviderService.updateProvider(ctrl.provider.id)
-    // //debugger
-    // return $http.patch('http://localhost:3000/api/v1/providers', data).error(function(err) {
-    //   console.log("There was an error")
-    //   })
     }
 })
