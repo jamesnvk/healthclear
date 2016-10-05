@@ -1,10 +1,22 @@
 <div class="container">
-  <form ng-submit="ctrl.addProvider()">
+  <form name="newProvider" ng-submit="ctrl.addProvider()">
     <div class="form-group">
+
       <label for="Provider"><h3>Provider</h3></label>
-      <input type="text" ng-model="ctrl.provider.name" class="form-control" id="provider" placeholder="Enter Provider">
+      <input type="text" ng-model="ctrl.provider.name" class="form-control" name="provider" placeholder="Enter Provider" ng-minlength="3" required/>
+      <div ng-messages="newProvider.provider.$error" ng-if="newProvider.provider.$touched">
+        <div ng-message="required">This field is required</div>
+        <div ng-message="minlength">Message must be at least 3 characters</div>
+      </div>
+
+
       <label for="Location"><h3>Location</h3></label>
-      <input type="text" ng-model="ctrl.provider.location" class="form-control" placeholder="Enter Location">
+      <input type="text" ng-model="ctrl.provider.location" class="form-control" name="location" placeholder="Enter Location" ng-minlength="3" required/>
+      <div ng-messages="newProvider.location.$error" ng-if="newProvider.location.$touched">
+        <div ng-message="required">This field is required</div>
+        <div ng-message="minlength">Message must be at least 3 characters</div>
+      </div>
+
       <label for="Price"><h3>Price</h3></label><br>
       <label class="radio-inline"><input type="radio" ng-model="ctrl.provider.price" value="$">$</label>
       <label class="radio-inline"><input type="radio" ng-model="ctrl.provider.price" value="$$" >$$</label>
