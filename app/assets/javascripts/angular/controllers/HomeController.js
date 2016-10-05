@@ -21,4 +21,10 @@ app.controller('HomeController', function(ProviderService, $location){
     var provider = lookup[id]
     ProviderService.updateProvider(provider)
   }
+
+  this.checkLocation = function(data){
+    if (/[^a-zA-Z0-9]/.test(data)){
+      return "Location must be alphanumeric"
+    }
+  }
 })
