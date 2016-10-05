@@ -19,11 +19,6 @@ app.controller('HomeController', function(ProviderService, $location, $http){
         lookup[this.providers[i].id] = this.providers[i];
       } 
     var provider = lookup[id]
-    var data = {location: provider.location}
-    
-    return $http.patch('http://localhost:3000/api/v1/providers/' + provider.id, data).error(function(err) {
-       console.log("There was an error")
-       })
-
-    }
+    ProviderService.updateProvider(provider)
+  }
 })
