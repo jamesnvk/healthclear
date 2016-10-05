@@ -1,4 +1,4 @@
-app.controller('HomeController', function(ProviderService, $location, $http){
+app.controller('HomeController', function(ProviderService, $location){
   var ctrl = this
   var url = 'http://localhost:3000/api/v1/providers'
 

@@ -1,5 +1,5 @@
 var app = angular
-  .module('app', ['ui.router', 'ngResource', 'templates', 'Devise', 'xeditable'])
+  .module('app', ['ui.router', 'ngResource', 'templates', 'Devise', 'xeditable', 'ngMessages'])
   .config(function ($stateProvider, $urlRouterProvider){
    $stateProvider
      .state('home', {
