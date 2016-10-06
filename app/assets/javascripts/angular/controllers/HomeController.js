@@ -22,4 +22,23 @@ app.controller('HomeController', function(ProviderService, $location){
     ProviderService.updateProvider(provider)
   }
   
+  this.priceIncludes = []
+    
+  this.includePrice = function(price) {
+    var i = ctrl.priceIncludes.indexOf(price)
+      if (i > -1) {
+        ctrl.priceIncludes.splice(i, 1)
+      } else {
+        ctrl.priceIncludes.push(price)
+      }
+  }
+    
+  this.priceFilter = function(provider) {
+    if (ctrl.priceIncludes.length > 0) {
+      if (ctrl.priceIncludes.indexOf(provider.price) < 0)
+        return
+      }
+    return provider
+  }
+  
 })
