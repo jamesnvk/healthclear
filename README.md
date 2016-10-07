@@ -9,12 +9,12 @@ Open source user reviews and price reports for healthcare providers.
 Run locally on macOS:
 
 - Clone this repo locally with $git clone https://github.com/jamesnvk/openhealth
-- $cd into openhealth directory
-- Run `$bundle`
-- Run `$rake db:migrate`
-- Run 'bower install angular'
-- Run 'bower install angular-ui-router'
-- Run 'bower install angular-xeditable'
+- `cd` into openhealth directory
+- Run `bundle`
+- Run `rake db:migrate`
+- Run `bower install angular`
+- Run `bower install angular-ui-router`
+- Run `bower install angular-xeditable`
 
 ##Contributing
 
