@@ -1,5 +1,5 @@
 <div class="container">
-  <form name="newProvider" ng-submit="ctrl.addProvider()">
+  <form name="newProvider" ng-submit="newProvider.$valid && ctrl.addProvider()">
     <div class="form-group">
 
       <label for="Provider"><h3>Provider</h3></label>
@@ -16,7 +16,7 @@
         <div ng-message="minlength">Must be at least 3 characters</div>
       </div>
 
-      <label for="Price"><h3>Price</h3></label><br>
+      <label for="Price"><h3>Average Price</h3></label><br>
       <label class="radio-inline"><input type="radio" ng-model="ctrl.provider.price" value="$">$</label>
       <label class="radio-inline"><input type="radio" ng-model="ctrl.provider.price" value="$$" >$$</label>
       <label class="radio-inline"><input type="radio" ng-model="ctrl.provider.price" value="$$$" >$$$</label>

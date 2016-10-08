@@ -1,6 +1,5 @@
 <form editable-form name="editableForm" onaftersave="ctrl.editProvider(provider.id)">
   <div>
-    <!-- editable username (text with validation) -->
     <span class="location">Location: </span>
     <span editable-text="provider.location" e-name="location" e-required>{{ provider.location || 'empty' }}</span>
   </div> 
