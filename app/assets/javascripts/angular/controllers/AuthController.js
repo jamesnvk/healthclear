@@ -13,12 +13,12 @@ app.controller('AuthController', function ($state, Auth) {
     })
   }
 
-  this.signedIn = function() {
-    Auth.isAuthenticated
-  } 
+  // this.signedIn = function() {
+  //   Auth.isAuthenticated
+  // } 
 
-  this.logout = function() {
-    Auth.logout
-  }
+  // this.logout = function() {
+  //   Auth.logout
+  // }
 
 })

@@ -1,7 +1,9 @@
 <form editable-form name="editableForm" onaftersave="ctrl.editProvider(provider.id)">
   <div>
     <span class="location">Location: </span>
-    <span editable-text="provider.location" e-name="location" e-required>{{ provider.location || 'empty' }}</span>
+    <span editable-text="provider.location" e-name="location" e-required>
+      <a ui-sref="home.locations">{{ provider.location || 'empty' }}</a>
+      </span>
   </div> 
   <div>
     <p>Expect to pay: {{ provider.price }}</p>
