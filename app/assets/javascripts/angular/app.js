@@ -36,7 +36,7 @@ var app = angular
        controller: 'ShowProviderController as ctrl'
      })
       .state('home.locations', {
-      url: 'locations/:locationname',
+      url: 'locations/:locationName',
       templateUrl: 'home/locations.html',
       controller: 'HomeController as ctrl'
      })
