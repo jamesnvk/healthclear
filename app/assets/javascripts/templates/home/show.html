@@ -10,7 +10,7 @@
       <p> 
         {{ provider.rating }} people have recommended this provider. 
         <button type="button" class="btn btn-primary btn-xs">-1</button>
-        <button type="button" class="btn btn-primary btn-xs">+1</button>
+        <button type="button" class="btn btn-primary btn-xs" ng-click="ctrl.incrementRating(provider.id)">+1</button>
 
       </p> 
     <!-- button to show form -->

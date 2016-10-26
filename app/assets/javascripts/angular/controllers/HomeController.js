@@ -20,6 +20,18 @@ app.controller('HomeController', function(ProviderService, $location){
     var provider = lookup[id]
     ProviderService.updateProvider(provider)
   }
+
+  this.incrementRating = function(id){
+    var lookup = {}
+      for (var i = 0, len = this.providers.length; i < len; i++) {
+        lookup[this.providers[i].id] = this.providers[i]
+      } 
+    var provider = lookup[id]
+    //debugger
+    provider.rating += 1
+
+    ProviderService.updateProvider(provider)
+  }
   
   this.priceIncludes = []
     
