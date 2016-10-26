@@ -2,6 +2,15 @@ app.controller('HomeController', function(ProviderService, $location){
   var ctrl = this
   var url = 'http://localhost:3000/api/v1/providers'
 
+  this.lookup = function(id){
+    var lookup = {}
+      for (var i = 0, len = this.providers.length; i < len; i++) {
+        lookup[this.providers[i].id] = this.providers[i]
+      } 
+    var provider = lookup[id]
+    return provider
+  }
+
   this.showHome = function(){
     return $location.path() === '/'
   } 
@@ -13,23 +22,19 @@ app.controller('HomeController', function(ProviderService, $location){
   }
 
   this.editProvider = function(id){
-    var lookup = {}
-      for (var i = 0, len = this.providers.length; i < len; i++) {
-        lookup[this.providers[i].id] = this.providers[i]
-      } 
-    var provider = lookup[id]
+    provider = ctrl.lookup(id)
     ProviderService.updateProvider(provider)
   }
 
   this.incrementRating = function(id){
-    var lookup = {}
-      for (var i = 0, len = this.providers.length; i < len; i++) {
-        lookup[this.providers[i].id] = this.providers[i]
-      } 
-    var provider = lookup[id]
-    //debugger
+    provider = ctrl.lookup(id)
     provider.rating += 1
+    ProviderService.updateProvider(provider)
+  }
 
+  this.decrementRating = function(id){
+    provider = ctrl.lookup(id)
+    provider.rating -= 1
     ProviderService.updateProvider(provider)
   }
   

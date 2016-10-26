@@ -9,7 +9,7 @@
     <p>Expect to pay: {{ provider.price }}</p>
       <p> 
         {{ provider.rating }} people have recommended this provider. 
-        <button type="button" class="btn btn-primary btn-xs">-1</button>
+        <button type="button" class="btn btn-primary btn-xs" ng-click="ctrl.decrementRating(provider.id)">-1</button>
         <button type="button" class="btn btn-primary btn-xs" ng-click="ctrl.incrementRating(provider.id)">+1</button>
 
       </p> 
