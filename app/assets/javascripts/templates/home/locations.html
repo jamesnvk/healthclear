@@ -1,16 +1,5 @@
-<div class="container" ng-repeat="provider in ctrl.providers">
-  <div class="bs-calltoaction bs-calltoaction-info">
-    <div class="row">
-      <div class="col-md-9 cta-contents">
-        <h1 class="cta-title">{{ provider.name }}</h1>
-          <div class="cta-desc">
-            <div ui-view="more" ng-show="showDetails"></div> 
-          </div>
-        </div>
-      <div class="col-md-3 cta-button">
-        <a ui-sref="home.provider({id: provider.id})" class="btn btn-lg btn-block btn-info"
-         ng-click="showDetails = ! showDetails">Details</a>
-      </div>
-    </div>
-  </div>
+<div class="container" ng-repeat="provider in ctrl.filteredLocations">
+  <ul>
+    <li>{{ provider.name }}</li>
+  </ul>
 </div>

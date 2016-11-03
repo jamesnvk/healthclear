@@ -32,13 +32,17 @@ var app = angular
         "more": {
           templateUrl: 'home/show.html'
           }
-        },
-       controller: 'ShowProviderController as ctrl'
+        }
      })
       .state('home.locations', {
       url: 'locations/:locationName',
       templateUrl: 'home/locations.html',
-      controller: 'HomeController as ctrl'
+      controller: 'LocationsController as ctrl',
+      params: {
+        locationName: null,
+        providersArray: null
+
+      }
      })
       
 

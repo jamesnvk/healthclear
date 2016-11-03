@@ -2,7 +2,8 @@
   <div>
     <span class="location">Location: </span>
     <span editable-text="provider.location" e-name="location" e-required>
-      <a ui-sref="home.locations({locationName: provider.location})">{{ provider.location || 'empty' }}</a>
+      <a ng-click="ctrl.goToLocation(provider.location)">
+        {{ provider.location || 'empty' }}</a>
       </span>
   </div> 
   <div>
