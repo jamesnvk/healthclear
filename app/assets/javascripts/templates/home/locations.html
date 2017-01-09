@@ -1,5 +1,9 @@
-<div class="container" ng-repeat="provider in ctrl.filteredLocations">
-  <ul>
-    <li>{{ provider.name }}</li>
-  </ul>
+<div class="container">
+  <h3> Providers in {{ctrl.locationName}} </h3>
+  <div ng-repeat="provider in ctrl.filteredLocations">
+    <ul>
+      <li>{{ provider.name }}</li>
+    </ul>
+  </div>
 </div>
+

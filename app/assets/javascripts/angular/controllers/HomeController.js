@@ -2,23 +2,22 @@ app.controller('HomeController', function(ProviderService, $location, $statePara
   var ctrl = this
   var url = 'http://localhost:3000/api/v1/providers'
 
+  this.comments = [];
+
+  this.addComment = function(){
+    ctrl.comments.push(ctrl.textModel)
+    ctrl.textModel = ""
+  }
+
+
   this.goToLocation = function(location){
     var providers = ctrl.providers
-    //console.log(providers)
-
     $state.go('home.locations', 
       { 
         locationName: location,
         providersArray: providers 
-      })//.then(function(response){
-        //console.log(response)
-      //})
+      })
   }
-
-
-
-  //console.log($stateParams.locationName)
-  //console.log($stateParams.providersArray) // controller resets and doesnt have the objects from GET after state change??
 
   this.lookup = function(id){
     var lookup = {}

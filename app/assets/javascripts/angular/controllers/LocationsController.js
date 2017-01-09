@@ -1,4 +1,4 @@
-app.controller('LocationsController', function($stateParams, $state, $filter){
+app.controller('LocationsController', function($stateParams, $filter){
   this.providers = $stateParams.providersArray
   this.locationName = $stateParams.locationName
 

@@ -9,8 +9,6 @@ app.service('ProviderService', function($http){
     return $http.get('http://localhost:3000/api/v1/providers/' + id)
   }
   this.updateProvider = function(data){
-    return $http.patch('http://localhost:3000/api/v1/providers/' + data.id, data).error(function(err) {
-       console.log("There was an error")
-    })
+    return $http.patch('http://localhost:3000/api/v1/providers/' + data.id, data)
   }
 })
