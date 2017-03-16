@@ -19,16 +19,6 @@
       Edit
     </button><br>
 
-    <p>Comments</p>
-    <form name="comments">
-      <textarea ng-model="ctrl.textModel"></textarea>
-    </form><br>
-    <div ng-repeat="comment in ctrl.comments">
-      <li>{{comment}}</li>
-    </div>
-
-    <button type="button" ng-click="ctrl.addComment()">Submit</button>
-    <!-- buttons to submit / cancel form -->
     <span ng-show="editableForm.$visible">
       <button type="submit" class="btn btn-primary" ng-disabled="editableForm.$waiting">
         Save
